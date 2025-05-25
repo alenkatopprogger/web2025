@@ -1,0 +1,585 @@
+/* Общие стили */
+* {
+    transition: all 0.3s ease;
+  }
+  
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Corbel", sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* Главная сетка */
+.main-grid {
+    display: grid;
+    width: 595px;
+    height: 842px;
+    grid-template-columns: 146px 146px 1fr 1fr;
+    grid-template-rows: 146px 1fr 1fr;
+    border: 1px solid rgb(214, 214, 214);
+    background-color: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Фото профиля */
+.profile-pic {
+    background-image: url("../public/user.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #F0F0F0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+  }
+
+
+/* Имя и фамилия */
+.name-spec {
+    background-color: #F0F0F0;
+    width: 124px;
+    height: 124px;
+    margin: 12px;
+    border-radius: 15px;
+    grid-column: 2;
+    grid-row: 1;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+.name-head {
+    grid-row: 1;
+    margin-left: 10px;
+}
+.name-form {
+    grid-row: 2;
+    padding: 15px;
+}
+
+/* Языки программирования */
+.languages {
+    background-color: #F0F0F0;
+    height: 124px;
+    margin: 12px;
+    border-radius: 15px;
+    grid-column: 3 / 5;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 24px 1fr 1fr 1fr;
+}
+.lang-title {
+    grid-row: 1;
+    grid-column: 1;
+}
+.lang-title > p {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 12px;
+}
+.lang-textlabel {
+    grid-row: 2;
+    grid-column: 1;
+    margin-top: 0;
+}
+.lang-textlabel > p {
+    margin: 0;
+    margin-left: 15px;
+    margin-bottom: 12px;
+    font-size: 12px;
+}
+.containers {
+    grid-row: 2;
+    grid-column: 2;
+}
+
+/* Опыт работы */
+.experience {
+    background-color: #F0F0F0;
+    margin: 12px;
+    border-radius: 15px;
+    grid-column: 1 / 4;
+    grid-row: 2;
+    display: grid;
+    grid-template-rows: 48px 1fr 1fr 1fr;
+}
+.exp-title {
+    grid-row: 1;
+}
+.exp-cont {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+}
+.exp-space,
+.exp-space2,
+.exp-space3 {
+    margin-bottom: 14px;
+    border-radius: 15px;
+    margin-left: 4%;
+    width: 92%;
+}
+.exp-space {
+    background-color: #25da7a;
+}
+.exp-space2,
+.exp-space3 {
+    background-color: white;
+}
+.exp-textlabel {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+}
+.exp-form {
+    grid-column: 1;
+    padding: 15px;
+    padding-top: 6px;
+}
+.exp-form2 {
+    grid-column: 2;
+    padding: 15px;
+    width: 200px;
+}
+
+/* Образование */
+.education {
+    background-color: #F0F0F0;
+    margin: 12px;
+    border-radius: 15px;
+    grid-column: 1 / 3;
+    grid-row: 3;
+}
+
+/* Интересы */
+.interests {
+    background-color: #F0F0F0;
+    margin: 12px;
+    border-radius: 15px;
+    grid-column: 3 / 5;
+    grid-row: 3;
+    font-family: Arial, sans-serif;
+    max-width: 550px;
+}
+
+.interests .input-container {
+    min-height: 40px;
+  }
+
+
+/* Вспомогательные формы */
+.form-exp,
+.form-exp1,
+.form-exp2,
+.form-expmain {
+    border: none;
+    min-height: 20px;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    width: 100%;
+    font-family: "Corbel";
+    font-weight: normal;
+}
+.form-exp {
+    font-size: 12px;
+}
+.form-exp1 {
+    font-size: 11px;
+}
+.form-exp2 {
+    font-size: 12px;
+    height: 110%;
+    overflow: hidden;
+    resize: none;
+    word-wrap: break-word;
+}
+.form-expmain {
+    margin: 6px 0 0 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Инпуты в интересах */
+.input-container {
+    display: inline-block;
+    position: relative;
+    margin: 5px;
+}
+.size-helper {
+    display: inline-block;
+    visibility: hidden;
+    white-space: nowrap;
+    font-size: 16px;
+    padding: 8px 12px;
+    min-width: 50px;
+}
+.auto-expand-input {
+    position: absolute;
+    color: black;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 28px;
+    padding: 12px;
+    margin-left: 10px;
+    font-size: 16px;
+    border: 1px #ccc;
+    border-radius: 12px;
+    box-sizing: border-box;
+    resize: none;
+    overflow: hidden;
+    white-space: nowrap;
+    background: white;
+    outline: none;
+    font-family: "Corbel";
+    font-size: 15px;
+    font-weight: normal;
+    text-align: center;
+}
+.auto-expand-input.add-button {
+    cursor: pointer;
+}
+.auto-expand-input.add-button::placeholder {
+    color: rgb(0, 0, 0);
+}
+
+/* Центровка контейнера */
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+}
+
+#lang_title{
+    font-size: 16px;
+}
+
+h2{
+    margin-left: 20px;
+}
+
+
+.green-bg {
+    background-color: #25da7a;
+
+  }
+  
+  .gray-bg {
+    background-color: #ffffff;
+  }
+
+  .green-bg input {
+    color: #ffffff;
+
+  }
+  
+  .gray-bg {
+    color: rgb(0, 0, 0);
+  }
+
+  .tools {
+    background-color: #F0F0F0;
+    margin: 12px;
+    border-radius: 15px;
+    grid-column: 4;
+    grid-row: 2;
+    padding: 12px;
+  }
+  
+  .tools-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 48px);
+    gap: 12px;
+    margin-top: 12px;
+  }
+  
+  .tool-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    object-fit: contain;
+    background: white;
+    padding: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  
+  .tool-add {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    background-color: #dcdcdc;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .icon-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+    background: white;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .icon-option {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: transform 0.2s;
+  }
+  
+  .icon-option:hover {
+    transform: scale(1.1);
+    background-color: #f0f0f0;
+  }
+  
+
+  /* ==== ОБЩИЙ ХОВЕР ДЛЯ БЛОКОВ ==== */
+.profile-pic,
+.name-spec,
+.languages,
+.experience,
+.education,
+.interests,
+.tools {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-pic:hover,
+.name-spec:hover,
+.languages:hover,
+.experience:hover,
+.education:hover,
+.interests:hover,
+.tools:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ==== ХОВЕР ДЛЯ ПОЛЕЙ ВВОДА ==== */
+input[type="text"]:hover,
+textarea:hover {
+  background-color: #c6c6c6;
+}
+
+/* ==== ХОВЕР НА КАРТОЧКИ ОПЫТА ==== */
+.exp-space:hover,
+.exp-space2:hover,
+.exp-space3:hover {
+  background-color: #07e14c;
+  cursor: pointer;
+}
+
+/* ==== ХОВЕР НА ТЕКСТ В .name-head ==== */
+.name-head:hover {
+  color: #25da7a;
+  cursor: default;
+}
+
+/* ==== ХОВЕР НА СЛАЙДЕРЫ ==== */
+.slider-track:hover {
+  cursor: pointer;
+  filter: brightness(1.05);
+}
+
+/* ==== ХОВЕР НА .auto-expand-input ==== */
+.auto-expand-input:hover {
+  background-color: #f0f0f0;
+  cursor: text;
+}
+
+/* ==== МЯГКАЯ АНИМАЦИЯ ПРИ ДОБАВЛЕНИИ ==== */
+@keyframes pulseIn {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.education-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    padding: 12px;
+  }
+  
+  .edu-card {
+    border-radius: 15px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .edu-form {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .save-pdf-btn {
+    /* Основные стили */
+    background-color: #25da7a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    border-radius: 4px; /* Добавим скругление углов */
+    font-family: inherit; /* Наследуем шрифт */
+    
+    /* Убираем стандартные стили браузера */
+    appearance: none;
+    -webkit-appearance: none;
+    
+    /* Для лучшего выравнивания текста */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .save-pdf-btn:hover {
+    background-color: darkgreen;
+    transform: scale(1.1);
+  }
+  
+  .save-pdf-btn:active {
+    transform: scale(1.05);
+  }
+  
+  /* Стили для контейнера кнопки */
+  .save-pdf-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+
+  @media print {
+    /* Общие исправления для текста */
+    * {
+      overflow: visible !important;
+      white-space: normal !important;
+    }
+  
+    /* Исправление для полей ввода */
+    input, textarea {
+      position: static !important;
+      width: 90% !important;
+      height: auto !important;
+      border: 1px solid #ddd !important;
+      background: transparent !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+  
+    /* Особые настройки для разных блоков */
+    .form-exp, .form-exp1, .form-exp2, .form-expmain {
+      min-width: 30px!important;
+      width: 100% !important;
+      height: auto !important;
+      min-height: 20px !important;
+    }
+  
+    .exp-form, .exp-form2 {
+      padding: 5px !important;
+    }
+  
+    .exp-textlabel {
+      grid-template-columns: 35% 1fr !important;
+    }
+  
+    .education-grid {
+      grid-template-columns: 1fr !important;
+      gap: 8px !important;
+    }
+    .save-pdf-container, .no-print {
+        display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
+        width: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+      .interests .auto-expand-input {
+        position: relative !important;
+        width: 90% !important;
+        left: auto !important;
+        top: auto !important;
+        margin: 5px auto !important;
+      }
+  }
+
+  .profile-pic-container {
+    width: 124px;
+    height: 124px;
+    margin: 12px;
+    grid-column: 1;
+    grid-row: 1;
+    position: relative;
+  }
+  
+  .profile-pic {
+    background-image: url("../public/user.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #F0F0F0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+  }
+  
+  .photo-upload-input {
+    display: none;
+  }
+  
+  .upload-label {
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 5px;
+    border-radius: 0 0 15px 15px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .upload-label:hover {
+    background: rgba(0, 0, 0, 0.9);
+  }
+  
+  /* Для печати */
+  @media print {
+    .photo-upload-input, .upload-label {
+      display: none !important;
+    }
+    
+    .profile-pic {
+        background-size: contain !important;
+        background-position: center !important;
+      }
+  }

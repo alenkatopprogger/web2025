@@ -1,0 +1,78 @@
+.slider-container {
+    width: 80%;
+    margin: 15px;
+    position: relative;
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.slider-track {
+    width: 100%;
+    height: 14px;
+    background-color: #e0e0e0;
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.slider-fill {
+    height: 100%;
+    background-color: #25da7a;
+    width: 0%;
+    border-radius: 3px;
+    transition: width 0.1s ease;
+}
+
+.slider-input {
+    position: absolute;
+    width: 100%;
+    margin-top: 5px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+    margin: 0;
+    z-index: 2;
+}
+
+
+
+.name-spec input {
+    border: none;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    width: 100%;
+}
+
+.name-spec input::placeholder {
+    color: #c8c8c8;
+}
+
+.form-name{
+    font-size: 16px;
+    font-weight: bold;
+}
+.form-spec{
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.form-lang{
+    border: none;
+    min-height: 20px;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    width: 100%;
+    font-family: "Corbel";
+    margin: 0px;
+    margin-left: 0px;
+    margin-bottom: 8px;
+    font-size: 12px;
+    font-weight: bold;
+}
